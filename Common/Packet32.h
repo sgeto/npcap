@@ -149,7 +149,7 @@ typedef struct NetType
 
 //some definitions stolen from libpcap
 
-#ifndef BPF_MAJOR_VERSION
+#if !defined (BPF_MAJOR_VERSION) && defined (PCAP_DONT_INCLUDE_PCAP_BPF_H)
 
 /*!
   \brief A BPF pseudo-assembly program.
